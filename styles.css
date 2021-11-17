@@ -8,12 +8,31 @@
 --Light-Grayish-Magenta: hsl(300, 24%, 96%);
 --White: hsl(0, 0%, 100%);
 }
-.body
-{
-    background-image: url(images/bg-pattern-top-desktop.svg);
-    background-repeat: no-repeat;
-}
 
+body
+{
+ 
+    background-image: url(images/bg-pattern-top-desktop.svg),
+     url(images/bg-pattern-bottom-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: 0% 50%, 100% -50%;
+    background-blend-mode:saturation ;
+    
+     
+}
+section{
+    display: flex;
+    flex-direction: row;
+  flex-flow: row wrap;
+  font-weight: bold;
+  text-align: center;
+  justify-content: center;
+
+}
+section > * {
+  padding: 10px;
+ 
+}
 
 .attribution {
     font-size: 11px;
