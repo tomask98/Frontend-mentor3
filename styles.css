@@ -35,20 +35,47 @@ section{
 
 }
 section > * {
+
   padding: 10px;
  
 }
+/*aca organizaremos los perfiles de las personas en tres columnas*/
+article { 
 
-.cont-cards{
-display: flex;
-flex-direction: column;
-justify-content: end;
-height: 300px;
-width: 50%;
-}
-.card1{
+  display: flex;
 
 }
+
+article > * {
+  padding: 10px;
+}
+
+.card1 {
+  margin: 10px;
+  padding:0px;
+  
+}
+
+.card2 {
+
+margin: 10px;
+
+border: 1px solid violet;
+}
+
+.card3 {
+margin: 10px;
+/* padding-top: 60px; */
+border: 1px solid violet;
+}
+
+.card1 , .card2 , .card3 {
+  border-radius: 5px;
+  background-color: hsl(300, 43%, 22%);
+  color: white;
+}
+/*aca organizaremos le daremos las caracteristicas necesarias a las fotos del perfil*/
+
 
 .attribution {
     font-size: 11px;
@@ -57,3 +84,6 @@ width: 50%;
   .attribution a {
     color: hsl(228, 45%, 44%);
   }
+
+
+  /*aca organizaremos los perfiles de las personas en tres columnas*/
