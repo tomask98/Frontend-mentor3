@@ -1,89 +1,219 @@
-:root{
---Very-Dark-Magenta: hsl(300, 43%, 22%);
---Soft-Pink: hsl(333, 80%, 67%);
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap');
 
-/* ### Neutral */
-
+:root {
 --Dark-Grayish-Magenta: hsl(303, 10%, 53%);
 --Light-Grayish-Magenta: hsl(300, 24%, 96%);
 --White: hsl(0, 0%, 100%);
+--Very-Dark-Magenta: hsl(300, 43%, 22%);
+--Soft-Pink: hsl(333, 80%, 67%)
 }
+
 *{
-  padding: 0;
-  margin:0 ;
-  box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
-body
-{
- 
-    background-image: url(images/bg-pattern-top-desktop.svg),
-     url(images/bg-pattern-bottom-desktop.svg);
+
+body{
+    background-image: url(./images/bg-pattern-top-mobile.svg), url(./images/bg-pattern-bottom-mobile.svg);
     background-repeat: no-repeat;
-    background-position: 0% 50%, 100% -50%;
-    background-blend-mode:saturation ;
     
-     
+     background-position: 0% 0%, 100% 100%; 
+    font-family: 'Spartan' , sans-serif;
+    font-size: 15px;
+    margin-top: 4em;
 }
-section{
+
+.container{
     display: flex;
-    flex-direction: row;
-  flex-flow: row wrap;
-  font-weight: bold;
-  text-align: center;
-  justify-content: center;
-  margin-top: 50vh;
-
-}
-section > * {
-
-  padding: 10px;
- 
-}
-/*aca organizaremos los perfiles de las personas en tres columnas*/
-article { 
-
-  display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 25px;
 
 }
 
-article > * {
-  padding: 10px;
-}
-
-.card1 {
-  margin: 10px;
-  padding:0px;
-  
-}
-
-.card2 {
-
-margin: 10px;
-
-border: 1px solid violet;
-}
-
-.card3 {
-margin: 10px;
-/* padding-top: 60px; */
-border: 1px solid violet;
-}
-
-.card1 , .card2 , .card3 {
-  border-radius: 5px;
-  background-color: hsl(300, 43%, 22%);
-  color: white;
-}
-/*aca organizaremos le daremos las caracteristicas necesarias a las fotos del perfil*/
-
-
-.attribution {
-    font-size: 11px;
+.service h1{
+    
     text-align: center;
-  }
-  .attribution a {
-    color: hsl(228, 45%, 44%);
-  }
+    color: var(--Very-Dark-Magenta);
+    font-weight: 700;
+    /* font-size: 5em; */
+}
+
+.service p{
+    text-align: center;
+    font-weight: 500;
+    color: var(--Dark-Grayish-Magenta);
+    line-height: 1.3rem;
+    margin: 1.3rem 0;
+}
 
 
-  /*aca organizaremos los perfiles de las personas en tres columnas*/
+.stars{
+    /* display: flex; */
+    text-align: center;
+    color: var(--Very-Dark-Magenta);
+    background-color: var(--Light-Grayish-Magenta);
+    padding: 1.3rem;
+    margin: 1.3rem 0;
+    border-radius: 10px;
+    font-weight: 700;
+}
+/* .stars_left {
+    margin-top: 1em;
+    align-self: flex-start;
+}
+
+.stars_center{
+    align-self: flex-start;
+    margin-left:10em ;
+}
+
+.stars_right{
+    align-self: flex-start;
+    margin-left:20em ;
+} */
+
+
+.card{
+    background-color: var(--Very-Dark-Magenta);
+    height: 350px;
+    border-radius: 10px;
+    padding: 20px 30px;
+    margin: 20px 10px;
+}
+
+.personal_information{
+    display: flex;
+}
+
+
+.personal_information img{
+    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+    /* margin-top: 0px; */
+    
+}
+
+.information{
+    font-weight: 400;
+    line-height: 1.5rem;
+    margin: 1.3rem 0;
+    color: var(--Light-Grayish-Magenta);
+    
+
+}
+
+.name{
+    margin: 5px 50px;
+    line-height: 1.3rem;font-weight: 500;
+    color: var(--White);
+
+    
+}
+
+.verified{
+    color: var(--Soft-Pink);
+    font-weight: 400;
+}
+
+
+@media only screen and (min-width: 768px) {
+    body{
+        background-image: url(./images/bg-pattern-top-desktop.svg), url(./images/bg-pattern-bottom-desktop.svg);
+        background-repeat: no-repeat;
+        
+         background-position: 0% 0%, 100% 100%; 
+    }
+    .service h1{
+
+        font-size: 5em;
+        text-align: left;
+    }
+    .part_1{
+        display: flex;
+        width: 100em;
+    }
+    .profiles{
+        display: flex;
+        flex-flow: row;
+        height:336px;    
+        width: 100em;    
+    }
+    .stars img{
+        margin: 0 5px;
+    }
+    .card{
+        
+        height: 250px;
+    }
+    .colton{
+        margin-top: 1em;
+        align-self: flex-start;
+    }
+    .irene{
+        margin-top: 1em;
+        align-self: center;
+    }
+    .anne{
+         margin-top: 1em;
+        align-self: flex-end;
+    }
+    .service{
+        margin:auto;
+    }
+    .service p{
+        font-size:15px;
+        text-align: left;
+        line-height: 10px;
+    }
+    .rated{
+      
+        display: flex;
+        flex-flow: column wrap ;
+        
+    }
+    .stars{
+        display: flex; 
+       
+    }
+    .stars p{
+        margin: 0px 25px;
+        text-align: center;
+    }
+     .stars_left {
+    margin-top: 1em;
+    align-self: flex-start;
+    }
+
+    .stars_center{
+    align-self: flex-start;
+    margin-left:10em ;
+    margin-top: 0px;
+    }
+
+    .stars_right{
+    align-self: flex-start;
+    margin-left:20em ;
+    margin-top: 0px;
+    } 
+      
+
+
+    /* For desktop: */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+  }
+ 
